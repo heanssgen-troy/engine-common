@@ -1,10 +1,10 @@
 {
-  "name": "engine-common",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@heanssgen-troy/engine-common",
+  "version": "1.0.2",
   "type": "module",
   "main": "src/index.js",
   "types": "src/index.d.ts",
+  "repository": "https://github.com/heanssgen-troy/engine-common.git",
   "scripts": {
     "generate": "npm run generate-proto && npm run generate-types && npm run generate-barrels",
     "generate-barrels": "barrelsby --config ./barrels.json",
@@ -15,6 +15,7 @@
   "devDependencies": {
     "@types/node": "^24.10.1",
     "barrelsby": "^2.8.1",
+    "tsc-alias": "^1.8.16",
     "typescript": "~5.9.3",
     "vite": "^7.2.4",
     "vite-node": "^5.2.0"
@@ -25,6 +26,7 @@
       "import": "./dist/index.js"
     }
   },
+  "files": ["dist/", "README.md"],
   "dependencies": {
     "@bufbuild/buf": "^1.61.0",
     "@bufbuild/protobuf": "^2.10.1",
@@ -33,5 +35,8 @@
     "@types/lodash-es": "^4.17.12",
     "lodash-es": "^4.17.21",
     "ts-morph": "^27.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
