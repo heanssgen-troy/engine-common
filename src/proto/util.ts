@@ -10,7 +10,7 @@ import {
 	type EngineMessageTypes,
 	type EngineRequestProtoMessageTypes
 } from "@/types/event.types";
-import {Identifiable} from "@/types/identifier";
+import {Identifiable} from "../types/identifier";
 
 export interface EngineEvent {
     type: EngineEventTypes;
@@ -32,7 +32,7 @@ export function createRequest<S extends EngineRequestProtoMessageTypes, C extend
 	})
 }
 
-export function createEvent<S extends EngineMessageTypes, C extends GenMessage<S>>(schema: GenMessage<S>, payload: MessageInitShape<C>, source: Identifiable, options?: RequestOptions): EngineEvent {
+export function createEvent<S extends EngineMessageTypes, C extends GenMessage<S>>(schema: GenMessage<S>, payload: MessageInitShape<C>, source?: Identifiable, options?: RequestOptions): EngineEvent {
 	const m = create(schema, payload);
 	const name = getOption(schema, event_name);
 

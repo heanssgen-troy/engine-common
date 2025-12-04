@@ -91,7 +91,7 @@ source.addImportDeclarations([
 			{name: 'EngineRequest', isTypeOnly: true},
 			{name: 'EngineResponse', isTypeOnly: true},
 		],
-		moduleSpecifier: '@/proto/engine_pb'
+		moduleSpecifier: '../proto/engine_pb'
 	}
 ])
 

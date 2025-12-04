@@ -3,12 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "generate": "npm run generate-proto && npm run generate-types && npm run generate-barrels",
     "generate-barrels": "barrelsby --config ./barrels.json",
     "generate-proto": "npx buf generate",
     "generate-types": "vite-node plugins/proto-event-gen.ts",
-    "build": "tsc"
+    "build": "tsc && tsc-alias"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
@@ -16,6 +18,12 @@
     "typescript": "~5.9.3",
     "vite": "^7.2.4",
     "vite-node": "^5.2.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
   "dependencies": {
     "@bufbuild/buf": "^1.61.0",
