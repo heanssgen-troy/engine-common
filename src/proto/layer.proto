@@ -1,0 +1,13 @@
+syntax = "proto3";
+import "event.proto";
+import "desc.proto";
+
+message LayerAdded {
+  option (event_name) = "layer.added";
+  Descriptor desc = 1;
+}
+
+message LayerRemoved {
+  option (event_name) = "layer.removed";
+  Descriptor desc = 1;
+}

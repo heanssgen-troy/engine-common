@@ -1,0 +1,6 @@
+{
+  "delete": true,
+  "directory": "./src",
+  "mode": "all",
+  "structure": "flat"
+}

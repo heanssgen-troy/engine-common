@@ -1,0 +1,13 @@
+syntax = "proto3";
+import "google/protobuf/descriptor.proto";
+
+enum Subject {
+  WIDGET = 0; // The default subject. If not specified, this will target a widget ID
+  LAYER = 1; // Targets a layer.
+  ENGINE = 2; // Targets the engine.
+}
+
+extend google.protobuf.MessageOptions {
+  string event_name = 5000;
+  repeated Subject targets = 5001;
+}

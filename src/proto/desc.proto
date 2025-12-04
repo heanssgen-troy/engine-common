@@ -1,0 +1,7 @@
+syntax = "proto3";
+import "event.proto";
+
+message Descriptor {
+  string id = 1;
+  Subject subject = 2;
+}

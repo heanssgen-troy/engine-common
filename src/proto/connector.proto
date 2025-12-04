@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message Registration {
+  enum RegistrationMode {
+    CLIENT = 0;
+    ENGINE = 1;
+  }
+
+  string name = 1;
+  RegistrationMode mode = 2;
+}

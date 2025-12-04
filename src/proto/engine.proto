@@ -1,0 +1,71 @@
+syntax = "proto3";
+import "layer.proto";
+import "desc.proto";
+import "widget.proto";
+import "event.proto";
+
+// All requests and responses MUST implement the extension event_name from event.proto
+// Failure to do so will cause the engine to fully reject your events.
+message EngineShutdown {
+  option (event_name) = "engine.shutdown";
+  Descriptor desc = 1;
+}
+
+enum RequestMode {
+  STRICT = 0; // The default mode. If not all targets are valid (either they do not exist, or no bound method is found for the call), an error will be thrown.
+  RELAXED = 1; // Invalid targets are silently ignored
+}
+
+message EngineRequest {
+  repeated Descriptor targets = 1;
+  RequestMode mode = 2;
+
+  oneof request {
+    SourcePlayRequest source_play = 10;
+    SourcePauseRequest source_pause = 11;
+    SourceStopRequest source_stop = 12;
+  }
+}
+
+message EngineResponse {
+  oneof response {
+    InvocationResponse invocation_response = 50;
+    LayerAdded layer_added = 100;
+    LayerRemoved layer_removed = 101;
+    WidgetAdded widget_added = 103;
+    WidgetRemoved widget_removed = 104;
+    WidgetAnimationStarted widget_animation_started = 105;
+    WidgetAnimationCompleted widget_animation_complete = 106;
+    WidgetMoved widget_moved = 107;
+    WidgetResized widget_resized = 108;
+    EngineShutdown engine_shutdown = 200;
+  }
+}
+
+message InvocationResponse {
+  option (event_name) = 'engine.rpc';
+  repeated RPCInvocation invocations = 1;
+}
+
+message RPCInvocation {
+  Descriptor target = 1;
+  InvocationStatus status = 2;
+  string error = 3;
+
+  enum InvocationStatus {
+    OK = 0;
+    FAILED = 1;
+  }
+}
+
+message EngineMessage {
+  Descriptor desc = 1;
+  oneof payload {
+    EngineRequest request = 10;
+    EngineResponse response = 11;
+  }
+}
+
+service EngineRpcService {
+  rpc call(EngineRequest) returns (EngineResponse) {};
+}
