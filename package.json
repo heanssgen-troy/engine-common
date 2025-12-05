@@ -1,13 +1,13 @@
 {
   "name": "@heanssgen-troy/engine-common",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "type": "module",
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "repository": "https://github.com/heanssgen-troy/engine-common.git",
   "scripts": {
     "generate": "npm run generate-proto && npm run generate-types && npm run generate-barrels",
-    "generate-barrels": "barrelsby --config ./barrels.json",
+    "generate-barrels": "vite-node plugins/optimize-treeshake.ts",
     "generate-proto": "npx buf generate",
     "generate-types": "vite-node plugins/proto-event-gen.ts",
     "build": "tsc && tsc-alias"

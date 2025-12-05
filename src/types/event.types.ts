@@ -1,5 +1,5 @@
 /**
-* @generated Thu Dec 04 2025 14:33:54 GMT-0500 (Eastern Standard Time)
+* @generated Fri Dec 05 2025 13:43:03 GMT-0500 (Eastern Standard Time)
 
 * This file has been generated to create a repository of proto bindings and information so that consumers of the layout engine do not need to
 * know or understand fundamental proto constructs. This also insulates developers from changing event specifications.

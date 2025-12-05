@@ -8,4 +8,9 @@ message Registration {
 
   string name = 1;
   RegistrationMode mode = 2;
+  string id = 3;
+}
+
+message Disconnect {
+  string id = 1;
 }

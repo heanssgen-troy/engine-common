@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file connector.proto.
  */
 export const file_connector: GenFile = /*@__PURE__*/
-  fileDesc("Cg9jb25uZWN0b3IucHJvdG8idgoMUmVnaXN0cmF0aW9uEgwKBG5hbWUYASABKAkSLAoEbW9kZRgCIAEoDjIeLlJlZ2lzdHJhdGlvbi5SZWdpc3RyYXRpb25Nb2RlIioKEFJlZ2lzdHJhdGlvbk1vZGUSCgoGQ0xJRU5UEAASCgoGRU5HSU5FEAFiBnByb3RvMw");
+  fileDesc("Cg9jb25uZWN0b3IucHJvdG8iggEKDFJlZ2lzdHJhdGlvbhIMCgRuYW1lGAEgASgJEiwKBG1vZGUYAiABKA4yHi5SZWdpc3RyYXRpb24uUmVnaXN0cmF0aW9uTW9kZRIKCgJpZBgDIAEoCSIqChBSZWdpc3RyYXRpb25Nb2RlEgoKBkNMSUVOVBAAEgoKBkVOR0lORRABIhgKCkRpc2Nvbm5lY3QSCgoCaWQYASABKAliBnByb3RvMw");
 
 /**
  * @generated from message Registration
@@ -25,6 +25,11 @@ export type Registration = Message<"Registration"> & {
    * @generated from field: Registration.RegistrationMode mode = 2;
    */
   mode: Registration_RegistrationMode;
+
+  /**
+   * @generated from field: string id = 3;
+   */
+  id: string;
 };
 
 /**
@@ -54,4 +59,21 @@ export enum Registration_RegistrationMode {
  */
 export const Registration_RegistrationModeSchema: GenEnum<Registration_RegistrationMode> = /*@__PURE__*/
   enumDesc(file_connector, 0, 0);
+
+/**
+ * @generated from message Disconnect
+ */
+export type Disconnect = Message<"Disconnect"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+};
+
+/**
+ * Describes the message Disconnect.
+ * Use `create(DisconnectSchema)` to create a new message.
+ */
+export const DisconnectSchema: GenMessage<Disconnect> = /*@__PURE__*/
+  messageDesc(file_connector, 1);
 

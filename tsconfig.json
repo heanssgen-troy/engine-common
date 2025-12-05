@@ -3,6 +3,7 @@
   "exclude": ["src/**/__tests__/*", "node_modules", "dist"],
   "compilerOptions": {
     "composite": true,
+    "target": "ES2024",
     "types": ["vite/client", "node"],
     "module": "ESNext",
     "moduleResolution": "bundler",
