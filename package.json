@@ -1,16 +1,15 @@
 {
   "name": "@heanssgen-troy/engine-common",
-  "version": "1.0.5",
-  "type": "module",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "version": "1.0.13",
   "repository": "https://github.com/heanssgen-troy/engine-common.git",
   "scripts": {
     "generate": "npm run generate-proto && npm run generate-types && npm run generate-barrels",
     "generate-barrels": "vite-node plugins/optimize-treeshake.ts",
     "generate-proto": "npx buf generate",
     "generate-types": "vite-node plugins/proto-event-gen.ts",
-    "build": "tsc && tsc-alias"
+    "build-esm": "tsc -p tsconfig.json && tsc-alias -p tsconfig.json",
+    "build-cjs": "tsc -p tsconfig.cjs.json && tsc-alias -p tsconfig.cjs.json",
+    "build": "npm run build-esm && npm run build-cjs"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
@@ -22,8 +21,11 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "types": "./dist/es/index.d.ts",
+      "import": "./dist/es/index.js",
+      "require": "./dist/es/index.d.ts",
+      "node": "./dist/es/index.d.ts",
+      "default": "./dist/es/index.d.ts"
     }
   },
   "files": ["dist/", "README.md"],

@@ -11,6 +11,9 @@ message EngineShutdown {
   Descriptor desc = 1;
 }
 
+message Ping {}
+message Pong {}
+
 enum RequestMode {
   STRICT = 0; // The default mode. If not all targets are valid (either they do not exist, or no bound method is found for the call), an error will be thrown.
   RELAXED = 1; // Invalid targets are silently ignored
@@ -21,15 +24,17 @@ message EngineRequest {
   RequestMode mode = 2;
 
   oneof request {
-    SourcePlayRequest source_play = 10;
-    SourcePauseRequest source_pause = 11;
-    SourceStopRequest source_stop = 12;
+    Ping ping = 50;
+    SourcePlayRequest source_play = 100;
+    SourcePauseRequest source_pause = 101;
+    SourceStopRequest source_stop = 102;
   }
 }
 
 message EngineResponse {
   oneof response {
-    InvocationResponse invocation_response = 50;
+    Pong pong = 50;
+    InvocationResponse invocation_response = 51;
     LayerAdded layer_added = 100;
     LayerRemoved layer_removed = 101;
     WidgetAdded widget_added = 103;

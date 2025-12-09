@@ -1,0 +1,20 @@
+{
+  "include": ["src", "src/**/*","src/*"],
+  "exclude": ["src/**/__tests__/*", "node_modules", "dist"],
+  "compilerOptions": {
+    "composite": true,
+    "target": "ES2024",
+    "types": ["vite/client", "node"],
+    "removeComments": false,
+    "baseUrl": ".",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "rootDir": "./src",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

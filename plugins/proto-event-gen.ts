@@ -48,7 +48,7 @@ function generateEventNames<T extends Message>(m: GenMessage<T>, oneof: 'request
 const root = resolve(dirname(__filename), "..");
 
 const project = new Project({
-    tsConfigFilePath: resolve(root, "tsconfig.json"),
+    tsConfigFilePath: resolve(root, "tsconfig.base.json"),
 });
 
 const response = generateEventNames(EngineResponseSchema, "response");

@@ -1,5 +1,5 @@
 /**
-* @generated Fri Dec 05 2025 13:43:03 GMT-0500 (Eastern Standard Time)
+* @generated Mon Dec 08 2025 20:07:37 GMT-0500 (Eastern Standard Time)
 
 * This file has been generated to create a repository of proto bindings and information so that consumers of the layout engine do not need to
 * know or understand fundamental proto constructs. This also insulates developers from changing event specifications.
@@ -9,9 +9,11 @@
 import { type GenMessage } from "@bufbuild/protobuf/codegenv2";
 import { type Message } from "@bufbuild/protobuf";
 import { EngineRequestSchema, EngineResponseSchema, type EngineRequest, type EngineResponse } from "../proto/engine_pb";
+import { PingSchema } from "@/proto/engine_pb";
 import { SourcePlayRequestSchema } from "@/proto/widget_pb";
 import { SourcePauseRequestSchema } from "@/proto/widget_pb";
 import { SourceStopRequestSchema } from "@/proto/widget_pb";
+import { PongSchema } from "@/proto/engine_pb";
 import { InvocationResponseSchema } from "@/proto/engine_pb";
 import { LayerAddedSchema } from "@/proto/layer_pb";
 import { LayerRemovedSchema } from "@/proto/layer_pb";
@@ -29,8 +31,8 @@ export type EngineResponseProtoMessageTypes = EngineResponse["response"]["value"
 export type EngineResponseProtoTypes = EngineResponse["response"]["case"];
 export type EngineProtoTypes = EngineRequestProtoTypes | EngineResponseProtoTypes;
 export type EngineMessageTypes = EngineRequestProtoMessageTypes | EngineResponseProtoMessageTypes;
-export type EngineRequestEventTypes = "request.source.play" | "request.source.pause" | "request.source.stop";
-export type EngineResponseEventTypes = "engine.rpc" | "layer.added" | "layer.removed" | "widget.added" | "widget.removed" | "widget.animation.started" | "widget.animation.completed" | "widget.moved" | "widget.resized" | "engine.shutdown";
+export type EngineRequestEventTypes = "ping" | "request.source.play" | "request.source.pause" | "request.source.stop";
+export type EngineResponseEventTypes = "pong" | "engine.rpc" | "layer.added" | "layer.removed" | "widget.added" | "widget.removed" | "widget.animation.started" | "widget.animation.completed" | "widget.moved" | "widget.resized" | "engine.shutdown";
 export type EngineEventTypes = EngineRequestEventTypes | EngineResponseEventTypes;
 
 export interface EventSchema {
@@ -41,6 +43,13 @@ export interface EventSchema {
     event: EngineEventTypes;
 }
 
+const PingMapping: EventSchema = {
+        schema: PingSchema,
+        namespace: "request",
+        parent: EngineRequestSchema,
+        name: "ping",
+        event: "ping"
+    };
 const SourcePlayRequestMapping: EventSchema = {
         schema: SourcePlayRequestSchema,
         namespace: "request",
@@ -61,6 +70,13 @@ const SourceStopRequestMapping: EventSchema = {
         parent: EngineRequestSchema,
         name: "sourceStop",
         event: "request.source.stop"
+    };
+const PongMapping: EventSchema = {
+        schema: PongSchema,
+        namespace: "response",
+        parent: EngineResponseSchema,
+        name: "pong",
+        event: "pong"
     };
 const InvocationResponseMapping: EventSchema = {
         schema: InvocationResponseSchema,
@@ -133,9 +149,11 @@ const EngineShutdownMapping: EventSchema = {
         event: "engine.shutdown"
     };
 export const EngineEventMapping = {
+        "ping": PingMapping,
         "request.source.play": SourcePlayRequestMapping,
         "request.source.pause": SourcePauseRequestMapping,
         "request.source.stop": SourceStopRequestMapping,
+        "pong": PongMapping,
         "engine.rpc": InvocationResponseMapping,
         "layer.added": LayerAddedMapping,
         "layer.removed": LayerRemovedMapping,
@@ -148,9 +166,11 @@ export const EngineEventMapping = {
         "engine.shutdown": EngineShutdownMapping
     };
 export const EngineEventInverseMapping = {
+        "ping": PingMapping,
         "sourcePlay": SourcePlayRequestMapping,
         "sourcePause": SourcePauseRequestMapping,
         "sourceStop": SourceStopRequestMapping,
+        "pong": PongMapping,
         "invocationResponse": InvocationResponseMapping,
         "layerAdded": LayerAddedMapping,
         "layerRemoved": LayerRemovedMapping,

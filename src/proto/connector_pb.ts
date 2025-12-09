@@ -10,7 +10,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file connector.proto.
  */
 export const file_connector: GenFile = /*@__PURE__*/
-  fileDesc("Cg9jb25uZWN0b3IucHJvdG8iggEKDFJlZ2lzdHJhdGlvbhIMCgRuYW1lGAEgASgJEiwKBG1vZGUYAiABKA4yHi5SZWdpc3RyYXRpb24uUmVnaXN0cmF0aW9uTW9kZRIKCgJpZBgDIAEoCSIqChBSZWdpc3RyYXRpb25Nb2RlEgoKBkNMSUVOVBAAEgoKBkVOR0lORRABIhgKCkRpc2Nvbm5lY3QSCgoCaWQYASABKAliBnByb3RvMw");
+  fileDesc("Cg9jb25uZWN0b3IucHJvdG8iggEKDFJlZ2lzdHJhdGlvbhIMCgRuYW1lGAEgASgJEiwKBG1vZGUYAiABKA4yHi5SZWdpc3RyYXRpb24uUmVnaXN0cmF0aW9uTW9kZRIKCgJpZBgDIAEoCSIqChBSZWdpc3RyYXRpb25Nb2RlEgoKBkNMSUVOVBAAEgoKBkVOR0lORRABIhYKCEFubm91bmNlEgoKAmlkGAEgASgJIhgKCkRpc2Nvbm5lY3QSCgoCaWQYASABKAliBnByb3RvMw");
 
 /**
  * @generated from message Registration
@@ -61,6 +61,23 @@ export const Registration_RegistrationModeSchema: GenEnum<Registration_Registrat
   enumDesc(file_connector, 0, 0);
 
 /**
+ * @generated from message Announce
+ */
+export type Announce = Message<"Announce"> & {
+  /**
+   * @generated from field: string id = 1;
+   */
+  id: string;
+};
+
+/**
+ * Describes the message Announce.
+ * Use `create(AnnounceSchema)` to create a new message.
+ */
+export const AnnounceSchema: GenMessage<Announce> = /*@__PURE__*/
+  messageDesc(file_connector, 1);
+
+/**
  * @generated from message Disconnect
  */
 export type Disconnect = Message<"Disconnect"> & {
@@ -75,5 +92,5 @@ export type Disconnect = Message<"Disconnect"> & {
  * Use `create(DisconnectSchema)` to create a new message.
  */
 export const DisconnectSchema: GenMessage<Disconnect> = /*@__PURE__*/
-  messageDesc(file_connector, 1);
+  messageDesc(file_connector, 2);
 

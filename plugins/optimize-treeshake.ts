@@ -82,7 +82,7 @@ function buildIndexForDirectory(directory: Directory): Symbol[] {
 const root = resolve(dirname(__filename), "..");
 
 const project = new Project({
-	tsConfigFilePath: resolve(root, "tsconfig.json"),
+	tsConfigFilePath: resolve(root, "tsconfig.base.json"),
 })
 
 project.getRootDirectories().forEach(directory => {

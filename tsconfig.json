@@ -1,23 +1,9 @@
 {
-  "include": ["src", "src/**/*","src/*"],
-  "exclude": ["src/**/__tests__/*", "node_modules", "dist"],
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "composite": true,
-    "target": "ES2024",
-    "types": ["vite/client", "node"],
+    "target": "ES6",
     "module": "ESNext",
-    "moduleResolution": "bundler",
-    "removeComments": false,
-    "outDir": "./dist",
-    "baseUrl": ".",
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "rootDir": "./src",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "outDir": "./dist/es",
+    "moduleResolution": "node"
   }
 }

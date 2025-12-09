@@ -17,7 +17,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file engine.proto.
  */
 export const file_engine: GenFile = /*@__PURE__*/
-  fileDesc("CgxlbmdpbmUucHJvdG8iQAoORW5naW5lU2h1dGRvd24SGQoEZGVzYxgBIAEoCzILLkRlc2NyaXB0b3I6E8K4Ag9lbmdpbmUuc2h1dGRvd24i1wEKDUVuZ2luZVJlcXVlc3QSHAoHdGFyZ2V0cxgBIAMoCzILLkRlc2NyaXB0b3ISGgoEbW9kZRgCIAEoDjIMLlJlcXVlc3RNb2RlEikKC3NvdXJjZV9wbGF5GAogASgLMhIuU291cmNlUGxheVJlcXVlc3RIABIrCgxzb3VyY2VfcGF1c2UYCyABKAsyEy5Tb3VyY2VQYXVzZVJlcXVlc3RIABIpCgtzb3VyY2Vfc3RvcBgMIAEoCzISLlNvdXJjZVN0b3BSZXF1ZXN0SABCCQoHcmVxdWVzdCLmAwoORW5naW5lUmVzcG9uc2USMgoTaW52b2NhdGlvbl9yZXNwb25zZRgyIAEoCzITLkludm9jYXRpb25SZXNwb25zZUgAEiIKC2xheWVyX2FkZGVkGGQgASgLMgsuTGF5ZXJBZGRlZEgAEiYKDWxheWVyX3JlbW92ZWQYZSABKAsyDS5MYXllclJlbW92ZWRIABIkCgx3aWRnZXRfYWRkZWQYZyABKAsyDC5XaWRnZXRBZGRlZEgAEigKDndpZGdldF9yZW1vdmVkGGggASgLMg4uV2lkZ2V0UmVtb3ZlZEgAEjsKGHdpZGdldF9hbmltYXRpb25fc3RhcnRlZBhpIAEoCzIXLldpZGdldEFuaW1hdGlvblN0YXJ0ZWRIABI+Chl3aWRnZXRfYW5pbWF0aW9uX2NvbXBsZXRlGGogASgLMhkuV2lkZ2V0QW5pbWF0aW9uQ29tcGxldGVkSAASJAoMd2lkZ2V0X21vdmVkGGsgASgLMgwuV2lkZ2V0TW92ZWRIABIoCg53aWRnZXRfcmVzaXplZBhsIAEoCzIOLldpZGdldFJlc2l6ZWRIABIrCg9lbmdpbmVfc2h1dGRvd24YyAEgASgLMg8uRW5naW5lU2h1dGRvd25IAEIKCghyZXNwb25zZSJJChJJbnZvY2F0aW9uUmVzcG9uc2USIwoLaW52b2NhdGlvbnMYASADKAsyDi5SUENJbnZvY2F0aW9uOg7CuAIKZW5naW5lLnJwYyKUAQoNUlBDSW52b2NhdGlvbhIbCgZ0YXJnZXQYASABKAsyCy5EZXNjcmlwdG9yEi8KBnN0YXR1cxgCIAEoDjIfLlJQQ0ludm9jYXRpb24uSW52b2NhdGlvblN0YXR1cxINCgVlcnJvchgDIAEoCSImChBJbnZvY2F0aW9uU3RhdHVzEgYKAk9LEAASCgoGRkFJTEVEEAEifQoNRW5naW5lTWVzc2FnZRIZCgRkZXNjGAEgASgLMgsuRGVzY3JpcHRvchIhCgdyZXF1ZXN0GAogASgLMg4uRW5naW5lUmVxdWVzdEgAEiMKCHJlc3BvbnNlGAsgASgLMg8uRW5naW5lUmVzcG9uc2VIAEIJCgdwYXlsb2FkKiYKC1JlcXVlc3RNb2RlEgoKBlNUUklDVBAAEgsKB1JFTEFYRUQQATI9ChBFbmdpbmVScGNTZXJ2aWNlEikKBGNhbGwSDi5FbmdpbmVSZXF1ZXN0Gg8uRW5naW5lUmVzcG9uc2UiAGIGcHJvdG8z", [file_layer, file_desc, file_widget, file_event]);
+  fileDesc("CgxlbmdpbmUucHJvdG8iQAoORW5naW5lU2h1dGRvd24SGQoEZGVzYxgBIAEoCzILLkRlc2NyaXB0b3I6E8K4Ag9lbmdpbmUuc2h1dGRvd24iBgoEUGluZyIGCgRQb25nIu4BCg1FbmdpbmVSZXF1ZXN0EhwKB3RhcmdldHMYASADKAsyCy5EZXNjcmlwdG9yEhoKBG1vZGUYAiABKA4yDC5SZXF1ZXN0TW9kZRIVCgRwaW5nGDIgASgLMgUuUGluZ0gAEikKC3NvdXJjZV9wbGF5GGQgASgLMhIuU291cmNlUGxheVJlcXVlc3RIABIrCgxzb3VyY2VfcGF1c2UYZSABKAsyEy5Tb3VyY2VQYXVzZVJlcXVlc3RIABIpCgtzb3VyY2Vfc3RvcBhmIAEoCzISLlNvdXJjZVN0b3BSZXF1ZXN0SABCCQoHcmVxdWVzdCL9AwoORW5naW5lUmVzcG9uc2USFQoEcG9uZxgyIAEoCzIFLlBvbmdIABIyChNpbnZvY2F0aW9uX3Jlc3BvbnNlGDMgASgLMhMuSW52b2NhdGlvblJlc3BvbnNlSAASIgoLbGF5ZXJfYWRkZWQYZCABKAsyCy5MYXllckFkZGVkSAASJgoNbGF5ZXJfcmVtb3ZlZBhlIAEoCzINLkxheWVyUmVtb3ZlZEgAEiQKDHdpZGdldF9hZGRlZBhnIAEoCzIMLldpZGdldEFkZGVkSAASKAoOd2lkZ2V0X3JlbW92ZWQYaCABKAsyDi5XaWRnZXRSZW1vdmVkSAASOwoYd2lkZ2V0X2FuaW1hdGlvbl9zdGFydGVkGGkgASgLMhcuV2lkZ2V0QW5pbWF0aW9uU3RhcnRlZEgAEj4KGXdpZGdldF9hbmltYXRpb25fY29tcGxldGUYaiABKAsyGS5XaWRnZXRBbmltYXRpb25Db21wbGV0ZWRIABIkCgx3aWRnZXRfbW92ZWQYayABKAsyDC5XaWRnZXRNb3ZlZEgAEigKDndpZGdldF9yZXNpemVkGGwgASgLMg4uV2lkZ2V0UmVzaXplZEgAEisKD2VuZ2luZV9zaHV0ZG93bhjIASABKAsyDy5FbmdpbmVTaHV0ZG93bkgAQgoKCHJlc3BvbnNlIkkKEkludm9jYXRpb25SZXNwb25zZRIjCgtpbnZvY2F0aW9ucxgBIAMoCzIOLlJQQ0ludm9jYXRpb246DsK4AgplbmdpbmUucnBjIpQBCg1SUENJbnZvY2F0aW9uEhsKBnRhcmdldBgBIAEoCzILLkRlc2NyaXB0b3ISLwoGc3RhdHVzGAIgASgOMh8uUlBDSW52b2NhdGlvbi5JbnZvY2F0aW9uU3RhdHVzEg0KBWVycm9yGAMgASgJIiYKEEludm9jYXRpb25TdGF0dXMSBgoCT0sQABIKCgZGQUlMRUQQASJ9Cg1FbmdpbmVNZXNzYWdlEhkKBGRlc2MYASABKAsyCy5EZXNjcmlwdG9yEiEKB3JlcXVlc3QYCiABKAsyDi5FbmdpbmVSZXF1ZXN0SAASIwoIcmVzcG9uc2UYCyABKAsyDy5FbmdpbmVSZXNwb25zZUgAQgkKB3BheWxvYWQqJgoLUmVxdWVzdE1vZGUSCgoGU1RSSUNUEAASCwoHUkVMQVhFRBABMj0KEEVuZ2luZVJwY1NlcnZpY2USKQoEY2FsbBIOLkVuZ2luZVJlcXVlc3QaDy5FbmdpbmVSZXNwb25zZSIAYgZwcm90bzM", [file_layer, file_desc, file_widget, file_event]);
 
 /**
  * All requests and responses MUST implement the extension event_name from event.proto
@@ -40,6 +40,32 @@ export const EngineShutdownSchema: GenMessage<EngineShutdown> = /*@__PURE__*/
   messageDesc(file_engine, 0);
 
 /**
+ * @generated from message Ping
+ */
+export type Ping = Message<"Ping"> & {
+};
+
+/**
+ * Describes the message Ping.
+ * Use `create(PingSchema)` to create a new message.
+ */
+export const PingSchema: GenMessage<Ping> = /*@__PURE__*/
+  messageDesc(file_engine, 1);
+
+/**
+ * @generated from message Pong
+ */
+export type Pong = Message<"Pong"> & {
+};
+
+/**
+ * Describes the message Pong.
+ * Use `create(PongSchema)` to create a new message.
+ */
+export const PongSchema: GenMessage<Pong> = /*@__PURE__*/
+  messageDesc(file_engine, 2);
+
+/**
  * @generated from message EngineRequest
  */
 export type EngineRequest = Message<"EngineRequest"> & {
@@ -58,19 +84,25 @@ export type EngineRequest = Message<"EngineRequest"> & {
    */
   request: {
     /**
-     * @generated from field: SourcePlayRequest source_play = 10;
+     * @generated from field: Ping ping = 50;
+     */
+    value: Ping;
+    case: "ping";
+  } | {
+    /**
+     * @generated from field: SourcePlayRequest source_play = 100;
      */
     value: SourcePlayRequest;
     case: "sourcePlay";
   } | {
     /**
-     * @generated from field: SourcePauseRequest source_pause = 11;
+     * @generated from field: SourcePauseRequest source_pause = 101;
      */
     value: SourcePauseRequest;
     case: "sourcePause";
   } | {
     /**
-     * @generated from field: SourceStopRequest source_stop = 12;
+     * @generated from field: SourceStopRequest source_stop = 102;
      */
     value: SourceStopRequest;
     case: "sourceStop";
@@ -82,7 +114,7 @@ export type EngineRequest = Message<"EngineRequest"> & {
  * Use `create(EngineRequestSchema)` to create a new message.
  */
 export const EngineRequestSchema: GenMessage<EngineRequest> = /*@__PURE__*/
-  messageDesc(file_engine, 1);
+  messageDesc(file_engine, 3);
 
 /**
  * @generated from message EngineResponse
@@ -93,7 +125,13 @@ export type EngineResponse = Message<"EngineResponse"> & {
    */
   response: {
     /**
-     * @generated from field: InvocationResponse invocation_response = 50;
+     * @generated from field: Pong pong = 50;
+     */
+    value: Pong;
+    case: "pong";
+  } | {
+    /**
+     * @generated from field: InvocationResponse invocation_response = 51;
      */
     value: InvocationResponse;
     case: "invocationResponse";
@@ -159,7 +197,7 @@ export type EngineResponse = Message<"EngineResponse"> & {
  * Use `create(EngineResponseSchema)` to create a new message.
  */
 export const EngineResponseSchema: GenMessage<EngineResponse> = /*@__PURE__*/
-  messageDesc(file_engine, 2);
+  messageDesc(file_engine, 4);
 
 /**
  * @generated from message InvocationResponse
@@ -176,7 +214,7 @@ export type InvocationResponse = Message<"InvocationResponse"> & {
  * Use `create(InvocationResponseSchema)` to create a new message.
  */
 export const InvocationResponseSchema: GenMessage<InvocationResponse> = /*@__PURE__*/
-  messageDesc(file_engine, 3);
+  messageDesc(file_engine, 5);
 
 /**
  * @generated from message RPCInvocation
@@ -203,7 +241,7 @@ export type RPCInvocation = Message<"RPCInvocation"> & {
  * Use `create(RPCInvocationSchema)` to create a new message.
  */
 export const RPCInvocationSchema: GenMessage<RPCInvocation> = /*@__PURE__*/
-  messageDesc(file_engine, 4);
+  messageDesc(file_engine, 6);
 
 /**
  * @generated from enum RPCInvocation.InvocationStatus
@@ -224,7 +262,7 @@ export enum RPCInvocation_InvocationStatus {
  * Describes the enum RPCInvocation.InvocationStatus.
  */
 export const RPCInvocation_InvocationStatusSchema: GenEnum<RPCInvocation_InvocationStatus> = /*@__PURE__*/
-  enumDesc(file_engine, 4, 0);
+  enumDesc(file_engine, 6, 0);
 
 /**
  * @generated from message EngineMessage
@@ -258,7 +296,7 @@ export type EngineMessage = Message<"EngineMessage"> & {
  * Use `create(EngineMessageSchema)` to create a new message.
  */
 export const EngineMessageSchema: GenMessage<EngineMessage> = /*@__PURE__*/
-  messageDesc(file_engine, 5);
+  messageDesc(file_engine, 7);
 
 /**
  * @generated from enum RequestMode

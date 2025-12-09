@@ -11,6 +11,10 @@ message Registration {
   string id = 3;
 }
 
+message Announce {
+  string id = 1;
+}
+
 message Disconnect {
   string id = 1;
 }
