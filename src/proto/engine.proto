@@ -11,8 +11,12 @@ message EngineShutdown {
   Descriptor desc = 1;
 }
 
-message Ping {}
-message Pong {}
+message Ping {
+  option (event_name) = "ping";
+}
+message Pong {
+  option (event_name) = "pong";
+}
 
 enum RequestMode {
   STRICT = 0; // The default mode. If not all targets are valid (either they do not exist, or no bound method is found for the call), an error will be thrown.
